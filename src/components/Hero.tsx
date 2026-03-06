@@ -54,7 +54,7 @@ export function Hero() {
                     className="mb-6 flex items-center justify-center gap-2 opacity-50 hover:opacity-100 transition-opacity"
                 >
                     <span className="w-1 h-1 rounded-full bg-wine"></span>
-                    <span className="text-white text-[9px] md:text-[10px] font-medium tracking-[0.2em] uppercase">CrossFit & HYROX</span>
+                    <span className="text-white text-[11px] md:text-[13px] font-medium tracking-[0.2em] uppercase text-center">Salle affiliée CrossFit et HYROX</span>
                     <span className="w-1 h-1 rounded-full bg-wine"></span>
                 </motion.div>
 
@@ -101,7 +101,7 @@ export function Hero() {
                             /* Desktop : bouton rouge plein */
                             sm:text-sm sm:bg-wine sm:text-white sm:border-transparent sm:px-10 sm:py-4
                             sm:hover:bg-white sm:hover:text-black sm:hover:border-transparent
-                            sm:shadow-[0_0_30px_rgba(198,0,0,0.3)] sm:hover:shadow-[0_0_50px_rgba(198,0,0,0.5)]
+                            sm:shadow-[0_0_30px_rgba(122,31,46,0.3)] sm:hover:shadow-[0_0_50px_rgba(122,31,46,0.5)]
                         "
                     >
                         Réserve ta séance d'essai gratuite
@@ -118,7 +118,7 @@ export function Hero() {
             >
                 <span>⭐ 5/5 sur Google</span>
                 <span className="text-cream/20">·</span>
-                <span>+130 adhérents</span>
+                <span>Toutes nos offres sans engagement</span>
                 <span className="text-cream/20">·</span>
                 <span>Talange (57)</span>
             </motion.div>

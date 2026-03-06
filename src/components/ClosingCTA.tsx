@@ -40,7 +40,7 @@ export function ClosingCTA() {
                                 rounded-full bg-white text-black font-heading text-sm md:text-base 
                                 tracking-widest uppercase transition-all duration-500 
                                 hover:bg-wine hover:text-white hover:scale-105 hover:border-transparent
-                                shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:shadow-[0_0_50px_rgba(198,0,0,0.4)]
+                                shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:shadow-[0_0_50px_rgba(122,31,46,0.4)]
                                 border border-white/10
                             "
                         >

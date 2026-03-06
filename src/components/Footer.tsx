@@ -84,6 +84,20 @@ export function Footer() {
                 </div>
 
                 {/* Bottom */}
+                <div className="pt-8 border-t flex flex-col items-center gap-6 pb-6">
+                    <p className="text-cream text-lg md:text-xl font-heading tracking-widest text-center uppercase">
+                        Rejoins la communauté.<br className="md:hidden" /> <span className="text-wine">100% sans engagement.</span>
+                    </p>
+                    <a
+                        href="https://app.peppy.cool"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary"
+                    >
+                        Réserver ma séance gratuite
+                    </a>
+                </div>
+
                 <div className="pt-8 border-t border-gray/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
                     <p>&copy; {currentYear} CrossFit Genki. Tous droits réservés.</p>
                     <div className="flex gap-6">

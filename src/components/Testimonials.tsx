@@ -4,23 +4,23 @@ import { Star } from 'lucide-react';
 export function Testimonials() {
     const reviews = [
         {
-            name: "Camille S.",
-            text: "J'ai récemment découvert CrossFit Genki, et je suis absolument ravie ! L'équipe est accueillante, professionnelle et vraiment attentive à chaque personne, quel que soit son niveau.",
+            name: "Virginie T.",
+            text: "Salle incroyable ! Coachs passionnés, très pros et toujours là pour nous faire progresser en toute sécurité. Super ambiance.",
             rating: 5,
         },
         {
-            name: "Nicolas",
-            text: "Super ambiance, coachs motivants et très pros ! Les séances sont variées, bien encadrées, et l'esprit de communauté est top.",
+            name: "Jessica B.",
+            text: "Enfin une box avec un coaching de HAUTE qualité. Rien n'est laissé au hasard.",
             rating: 5,
         },
         {
-            name: "Pauline S.",
-            text: "Au menu : bienveillance et dépassement de soi. Je recommande à 1000%.",
+            name: "JC",
+            text: "Un an déjà et toujours autant de plaisir. Coaching de qualité et résultats au rendez-vous.",
             rating: 5,
         },
         {
-            name: "Amélie R.",
-            text: "Les coachs sont à l'écoute, hyper abordables, vraiment au top pour débuter et progresser !",
+            name: "Melanie O.",
+            text: "Je suis venue pour le sport et j'ai trouvé une chouette ambiance. Les coachs savent s'adapter à chacun.",
             rating: 5,
         }
     ];
@@ -53,11 +53,18 @@ export function Testimonials() {
                                 <Star key={i} size={20} fill="currentColor" />
                             ))}
                         </div>
-                        <span className="text-sm font-body text-cream/70">7 avis Google</span>
+                        <span className="text-sm font-body text-cream/70">38 avis Google</span>
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pb-8 -mx-6 px-6 md:mx-0 md:px-0"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                    <style dangerouslySetInnerHTML={{
+                        __html: `
+                        #testimonials .flex::-webkit-scrollbar { display: none; }
+                    `}} />
                     {reviews.map((review, index) => (
                         <motion.div
                             key={index}
@@ -65,21 +72,21 @@ export function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl relative"
+                            className="bg-zinc-900 border border-zinc-800 p-6 md:p-8 rounded-2xl relative min-w-[280px] w-[80vw] sm:w-[350px] md:min-w-0 md:w-auto snap-center flex-none flex flex-col justify-between"
                         >
-                            <div className="flex text-wine mb-6">
+                            <div className="flex text-wine mb-4 md:mb-6">
                                 {[...Array(review.rating)].map((_, i) => (
                                     <Star key={i} size={16} fill="currentColor" />
                                 ))}
                             </div>
-                            <p className="text-base text-cream/90 font-body mb-8 italic">"{review.text}"</p>
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 bg-wine/20 rounded-full flex items-center justify-center text-wine font-heading font-bold text-lg uppercase">
+                            <p className="text-sm md:text-base text-cream/90 font-body mb-6 md:mb-8 italic line-clamp-4 md:line-clamp-none">"{review.text}"</p>
+                            <div className="flex items-center gap-4 mt-auto">
+                                <div className="w-10 h-10 bg-wine/20 rounded-full flex items-center justify-center text-wine font-heading font-bold text-lg uppercase shrink-0">
                                     {review.name.charAt(0)}
                                 </div>
-                                <div>
-                                    <h4 className="font-heading text-white uppercase tracking-wider text-sm">{review.name}</h4>
-                                    <span className="text-xs text-cream/50">Via Google Reviews</span>
+                                <div className="min-w-0">
+                                    <h4 className="font-heading text-white uppercase tracking-wider text-sm truncate">{review.name}</h4>
+                                    <span className="text-xs text-cream/50">Google Reviews</span>
                                 </div>
                             </div>
                         </motion.div>

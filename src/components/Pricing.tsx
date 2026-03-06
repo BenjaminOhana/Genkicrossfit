@@ -4,64 +4,47 @@ import { Check, Sparkles } from 'lucide-react';
 export function Pricing() {
     const mainPlans = [
         {
-            name: "Séance d'essai",
-            price: "Gratuite",
-            period: "",
-            description: "Viens tester sans engagement. Zéro risque, zéro pression.",
+            name: "Essentiel",
+            price: "55€",
+            period: "/ mois",
+            description: "Sport et flexibilité à ton rythme.",
             features: [
-                "Évaluation de ton niveau",
-                "Initiation aux mouvements de base",
-                "Participation à un WOD adapté",
-                "Visite complète de la box"
+                "5 séances de CrossFit / mois",
+                "Accès à l'espace Open & Chill",
+                "🔥 **Sans engagement**"
             ],
-            cta: "Réserver ma séance gratuite",
-            highlight: true,
-            tag: "Idéal pour commencer"
+            cta: "S'inscrire",
+            highlight: false,
+            tag: null
         },
         {
             name: "Full Access",
             price: "95€",
             period: "/ mois",
-            description: "Jusqu'à 5 séances de coaching par semaine.",
+            description: "L'expérience CrossFit complète.",
             features: [
-                "5 séances de coaching / semaine",
-                "Accès Open & Chill illimité",
-                "Programmation personnalisée",
-                "Communauté & événements"
+                "Accès à tous les WODs (CrossFit & HYROX)",
+                "Accès illimité Open & Chill",
+                "🔥 **Sans engagement**"
             ],
             cta: "S'inscrire",
-            highlight: false,
+            highlight: true,
             tag: "Le plus populaire"
         },
         {
-            name: "10 Séances",
-            price: "75€",
-            period: "/ mois",
-            description: "10 séances de coaching par mois. Flexible et efficace.",
+            name: "Carnet 10 Séances",
+            price: "170€",
+            period: "",
+            description: "La liberté totale. Tu paies ce que tu consommes.",
             features: [
-                "10 séances de coaching / mois",
-                "Accès Open & Chill illimité",
-                "Programmation disponible",
-                "Sans engagement"
+                "10 crédits de réservation",
+                "Valable 6 mois",
+                "🔥 **Zéro abonnement**"
             ],
-            cta: "S'inscrire",
+            cta: "Acheter un carnet",
             highlight: false,
             tag: null
         }
-    ];
-
-    const secondaryPlans = [
-        { name: "5 séances", price: "55€/mois" },
-        { name: "Étudiant", price: "60€/mois" },
-        { name: "Force de l'ordre", price: "70€/mois" },
-        { name: "Kids", price: "30€/mois" },
-    ];
-
-    const cartes = [
-        { name: "10 séances CrossFit + HYROX", price: "170€" },
-        { name: "5 séances", price: "95€" },
-        { name: "Pack découverte", price: "2 offertes" },
-        { name: "Unité", price: "20€" },
     ];
 
     return (
@@ -74,8 +57,11 @@ export function Pricing() {
                     transition={{ duration: 0.6 }}
                     className="text-center max-w-2xl mx-auto mb-20"
                 >
-                    <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">Nos Offres</span>
+                    <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">Découvrir</span>
                     <h2 className="text-5xl md:text-6xl font-heading font-bold mb-6 tracking-tight">Tarifs Sans Surprise</h2>
+                    <p className="text-lg text-black/60 font-body italic">
+                        Pas de contrat long. Pas de frais cachés. Juste du sport et du kiff.
+                    </p>
                 </motion.div>
 
                 {/* Main Plans */}
@@ -100,41 +86,52 @@ export function Pricing() {
                                 </div>
                             )}
 
-                            <div className={`p-8 md:p-10 ${plan.tag ? 'pt-14' : ''} flex-grow`}>
-                                <h3 className="text-2xl font-heading uppercase tracking-wider mb-2">{plan.name}</h3>
-                                <p className={`text-sm mb-6 ${plan.highlight ? 'text-cream/70' : 'text-black/60'}`}>
+                            <div className={`p-8 md:p-12 ${plan.tag ? 'pt-16' : ''} flex-grow flex flex-col`}>
+                                <h3 className="text-3xl font-heading uppercase tracking-wider mb-3">{plan.name}</h3>
+                                <p className={`text-base mb-8 flex-grow ${plan.highlight ? 'text-cream/70' : 'text-black/60'}`}>
                                     {plan.description}
                                 </p>
-                                <div className="flex items-baseline gap-2 mb-8">
-                                    <span className={`text-5xl font-bold tracking-tight ${plan.highlight ? 'text-white' : 'text-black'}`}>
+                                <div className="flex items-baseline gap-2 mb-10 pb-10 border-b border-black/10">
+                                    <span className={`text-6xl font-bold tracking-tight ${plan.highlight ? 'text-white border-white/10' : 'text-black border-black/10'}`}>
                                         {plan.price}
                                     </span>
                                     {plan.period && (
-                                        <span className={`text-lg font-medium ${plan.highlight ? 'text-cream/50' : 'text-black/50'}`}>
+                                        <span className={`text-xl font-medium ${plan.highlight ? 'text-cream/50' : 'text-black/50'}`}>
                                             {plan.period}
                                         </span>
                                     )}
                                 </div>
 
-                                <ul className="space-y-4 mb-8">
-                                    {plan.features.map((feature, i) => (
-                                        <li key={i} className="flex items-start gap-3">
-                                            <Check size={20} className={`shrink-0 ${plan.highlight ? 'text-wine' : 'text-black'}`} />
-                                            <span className={`text-sm ${plan.highlight ? 'text-cream/90' : 'text-black/80'}`}>{feature}</span>
-                                        </li>
-                                    ))}
+                                <ul className="space-y-5 mb-10 text-base">
+                                    {plan.features.map((feature, i) => {
+                                        const isHighlightFeature = feature.includes("Sans engagement") || feature.includes("Zéro abonnement");
+                                        return (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <Check size={20} className={`shrink-0 ${plan.highlight ? 'text-wine' : 'text-black'} ${isHighlightFeature ? 'mt-0.5' : ''}`} />
+                                                <span className={`text-sm ${plan.highlight ? 'text-cream/90' : 'text-black/80'}`}>
+                                                    {isHighlightFeature ? (
+                                                        <span className={plan.highlight ? 'text-white font-bold' : 'text-wine font-bold'}>
+                                                            {feature.replace('🔥 **', '🔥 ').replace('**', '')}
+                                                        </span>
+                                                    ) : (
+                                                        feature
+                                                    )}
+                                                </span>
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </div>
 
-                            <div className="p-8 pt-0 mt-auto">
+                            <div className="p-8 md:p-12 pt-0 mt-auto">
                                 <a
                                     href="https://app.peppy.cool"
                                     data-cta
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`w-full block text-center uppercase tracking-widest text-sm font-heading py-4 transition-colors rounded-xl ${plan.highlight
-                                        ? 'bg-wine text-white hover:bg-white hover:text-black'
-                                        : 'bg-black text-white hover:bg-wine'
+                                    className={`w-full block text-center uppercase tracking-widest text-base font-heading py-5 transition-colors rounded-2xl ${plan.highlight
+                                        ? 'bg-wine text-white hover:bg-white hover:text-black shadow-lg hover:shadow-xl'
+                                        : 'bg-black text-white hover:bg-wine shadow hover:shadow-lg'
                                         }`}
                                 >
                                     {plan.cta}
@@ -144,66 +141,42 @@ export function Pricing() {
                     ))}
                 </div>
 
-                {/* Secondary Plans */}
+                {/* Étudiants / FDO Discount Badge */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-12"
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="max-w-2xl mx-auto flex items-center justify-center gap-3 bg-white/50 border border-black/5 rounded-xl p-4 md:p-5 mb-20 text-center"
                 >
-                    <h3 className="text-2xl font-heading uppercase tracking-wider text-center mb-8">Abonnements mensuels</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {secondaryPlans.map((plan, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className="bg-white border border-black/10 rounded-xl p-6 text-center hover:border-wine/30 transition-colors"
-                            >
-                                <h4 className="font-heading uppercase tracking-wider text-sm mb-2">{plan.name}</h4>
-                                <span className="text-2xl font-bold text-black">{plan.price}</span>
-                            </motion.div>
-                        ))}
+                    <div className="shrink-0 bg-wine/10 text-wine w-10 h-10 rounded-full flex items-center justify-center">
+                        <span className="font-heading font-bold text-lg">%</span>
                     </div>
+                    <p className="text-sm md:text-base text-black/70 flex-1 max-w-lg">
+                        <strong className="text-black font-medium">Étudiants & Forces de l'ordre : </strong>
+                        Bénéficiez de <span className="text-wine font-bold">~37% de réduction</span> (60€/mois sur l'abonnement Full Access au lieu de 95€) sur présentation de justificatif.
+                    </p>
                 </motion.div>
 
-                {/* Cartes sans abo */}
+                {/* Essayez d'abord CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-16"
+                    transition={{ duration: 0.6, delay: 0.35 }}
+                    className="flex flex-col items-center justify-center mb-16 space-y-4"
                 >
-                    <h3 className="text-2xl font-heading uppercase tracking-wider text-center mb-8">Cartes sans abonnement</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {cartes.map((carte, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className="bg-white border border-black/10 rounded-xl p-6 text-center hover:border-wine/30 transition-colors"
-                            >
-                                <h4 className="font-heading uppercase tracking-wider text-sm mb-2">{carte.name}</h4>
-                                <span className="text-2xl font-bold text-black">{carte.price}</span>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-center text-lg text-black/60 font-body italic"
-                >
-                    <p>Pas de contrat long. Pas de frais cachés. Juste du sport et du kiff.</p>
+                    <p className="text-black/80 font-medium text-lg text-center">
+                        Tu hésites encore ? Viens tester gratuitement
+                    </p>
+                    <a
+                        href="https://app.peppy.cool"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary"
+                    >
+                        Je veux essayer d'abord
+                    </a>
                 </motion.div>
             </div>
         </section>
