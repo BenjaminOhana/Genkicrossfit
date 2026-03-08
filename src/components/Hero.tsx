@@ -82,7 +82,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-                    className="w-full flex justify-center px-4"
+                    className="w-full flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 px-4"
                 >
                     <a
                         href="https://app.peppy.cool"
@@ -105,6 +105,28 @@ export function Hero() {
                         "
                     >
                         Réserve ta séance d'essai gratuite
+                    </a>
+
+                    <a
+                        href="#pricing"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="
+                            inline-flex items-center justify-center
+                            font-heading uppercase tracking-widest
+                            transition-all duration-300
+                            w-full max-w-[280px] sm:max-w-none sm:w-auto
+                            
+                            /* Plus discret : bordure transparente/légère */
+                            text-xs py-3 px-6 
+                            text-white/60 hover:text-white
+                            border border-transparent hover:border-white/30
+                            sm:text-sm sm:py-4 sm:px-10
+                        "
+                    >
+                        Voir les formules
                     </a>
                 </motion.div>
             </motion.div>
