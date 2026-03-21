@@ -31,7 +31,7 @@ export function ClosingCTA() {
                         className="flex justify-center"
                     >
                         <a
-                            href="https://app.peppy.cool"
+                            href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                             data-cta
                             target="_blank"
                             rel="noopener noreferrer"

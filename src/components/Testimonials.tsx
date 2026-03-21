@@ -103,7 +103,7 @@ export function Testimonials() {
                     <p className="text-lg text-cream/70 font-body mb-8">
                         Rejoins-les. Réserve ta séance d'essai gratuite.
                     </p>
-                    <a href="https://app.peppy.cool" data-cta target="_blank" rel="noopener noreferrer" className="btn-primary">
+                    <a href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/" data-cta target="_blank" rel="noopener noreferrer" className="btn-primary">
                         Réserve ta séance d'essai gratuite
                     </a>
                 </motion.div>

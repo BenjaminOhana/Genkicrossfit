@@ -4,19 +4,22 @@ export function Demystification() {
     const points = [
         {
             number: "01",
-            image: "/assets/58D60C96-815D-4522-88BA-3A282312005C.JPG",
+            imageMobile: "/assets/adaptédesktop.jpeg",
+            imageDesktop: "/assets/adaptédesktop.jpeg",
             title: "Adapté à toi",
             description: "Chaque mouvement est adapté à ton niveau. Que tu n'aies jamais mis les pieds dans une salle ou que tu sois sportif depuis 10 ans — ta place est ici."
         },
         {
             number: "02",
-            image: "/assets/58A878DE-A00E-4B99-840C-6CB8B6C8389B.JPG",
+            imageMobile: "/assets/intensitemobile.jpeg",
+            imageDesktop: "/assets/adaptédesktop.jpeg",
             title: "L'intensité, c'est toi qui la choisis",
             description: "On ne te demande pas d'aller au bout de tes limites dès le premier jour. L'intensité est relative et toujours encadrée par un coach certifié."
         },
         {
             number: "03",
-            image: "/assets/B1DCAE62-1EA6-46FD-BF78-86B4C8C9E37B.JPG",
+            imageMobile: "/assets/famillemobile.jpeg",
+            imageDesktop: "/assets/familledesktop.jpeg",
             title: "Plus qu'un sport, une famille",
             description: "Ici les gens se connaissent, s'encouragent, font des sorties ensemble. Tu viens pour le sport, tu restes pour les gens."
         }
@@ -55,14 +58,24 @@ export function Demystification() {
                         >
                             {/* Background Image — effet focus au scroll */}
                             <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-                                <motion.div
-                                    initial={{ opacity: 0.35, filter: 'grayscale(70%)', scale: 1 }}
-                                    whileInView={{ opacity: 0.85, filter: 'grayscale(0%)', scale: 1.05 }}
-                                    viewport={{ margin: "-25% 0px -25% 0px" }} // S'active au milieu de l'écran 
-                                    transition={{ duration: 0.8, ease: "easeOut" }}
-                                    className="w-full h-full bg-cover bg-center group-hover:!opacity-95 group-hover:!scale-105 group-hover:!grayscale-0 transition-transform duration-1000 ease-out"
-                                    style={{ backgroundImage: `url('${point.image}')` }}
-                                ></motion.div>
+                                    <>
+                                        <motion.div
+                                            initial={{ opacity: 0.35, filter: 'grayscale(70%)', scale: 1 }}
+                                            whileInView={{ opacity: 0.85, filter: 'grayscale(0%)', scale: 1.05 }}
+                                            viewport={{ margin: "-25% 0px -25% 0px" }} 
+                                            transition={{ duration: 0.8, ease: "easeOut" }}
+                                            className="w-full h-full bg-cover bg-center group-hover:!opacity-95 group-hover:!scale-105 group-hover:!grayscale-0 transition-transform duration-1000 ease-out md:hidden"
+                                            style={{ backgroundImage: `url('${point.imageMobile}')` }}
+                                        ></motion.div>
+                                        <motion.div
+                                            initial={{ opacity: 0.35, filter: 'grayscale(70%)', scale: 1 }}
+                                            whileInView={{ opacity: 0.85, filter: 'grayscale(0%)', scale: 1.05 }}
+                                            viewport={{ margin: "-25% 0px -25% 0px" }} 
+                                            transition={{ duration: 0.8, ease: "easeOut" }}
+                                            className="w-full h-full bg-cover bg-center group-hover:!opacity-95 group-hover:!scale-105 group-hover:!grayscale-0 transition-transform duration-1000 ease-out hidden md:block"
+                                            style={{ backgroundImage: `url('${point.imageDesktop}')` }}
+                                        ></motion.div>
+                                    </>
                             </div>
 
                             {/* Gradient — fort en bas pour le texte, léger en haut */}
@@ -120,7 +133,7 @@ export function Demystification() {
                     <p className="text-xl text-[#1a1a1a]/60 font-body italic mb-8 max-w-2xl mx-auto">
                         Un essai suffit. Réserve le tien.
                     </p>
-                    <a href="https://app.peppy.cool" data-cta target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-12 py-5 shadow-xl hover:shadow-2xl">
+                    <a href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/" data-cta target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-12 py-5 shadow-xl hover:shadow-2xl">
                         Essaie gratuitement
                     </a>
                 </motion.div>

@@ -74,7 +74,7 @@ export function Footer() {
                             <li><a href="#pricing" className="text-cream/80 hover:text-white transition-colors">Tarifs</a></li>
                             <li><a href="/hyrox" className="text-cream/80 hover:text-white transition-colors">Programme HYROX</a></li>
                             <li className="pt-2">
-                                <a href="https://app.peppy.cool" target="_blank" rel="noopener noreferrer" className="text-wine font-medium hover:underline underline-offset-4">
+                                <a href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/" target="_blank" rel="noopener noreferrer" className="text-wine font-medium hover:underline underline-offset-4">
                                     Réserver une séance
                                 </a>
                             </li>
@@ -89,7 +89,7 @@ export function Footer() {
                         Rejoins la communauté.<br className="md:hidden" /> <span className="text-wine">100% sans engagement.</span>
                     </p>
                     <a
-                        href="https://app.peppy.cool"
+                        href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary"

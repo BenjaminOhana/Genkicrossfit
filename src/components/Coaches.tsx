@@ -5,30 +5,26 @@ export function Coaches() {
         {
             name: "Adrien Marquis",
             role: "Fondateur & Owner",
-            certifications: ["CrossFit Level 1", "Level 2 en cours"],
-            quote: "Mon objectif : que chaque personne se sente comme chez elle chez CrossFit Genki.",
-            image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80",
+            certifications: ["CrossFit Level 1", "Level 2 (en cours)"],
+            quote: "Toujours bienveillant (sauf pendant les burpees). Adrien n'entraîne pas seulement des athlètes, il bâtit une communauté. Son objectif ? Que tu te sentes ici comme à la maison et que tu sois fier(e) de ce dont tu es capable.",
+            image: "/assets/Coachadrien.jpeg?v=3",
+            position: "object-top"
         },
         {
             name: "Loris Duval",
             role: "Head Coach",
-            certifications: ["CrossFit Level 2", "Level 3 en cours", "BPJEPS AF"],
-            quote: "Je veux vous aider à devenir la meilleure version de vous-même, avec des entraînements variés et du coaching sur-mesure.",
-            image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80",
+            certifications: ["CrossFit Level 2", "Level 3 (en cours)", "BPJEPS AF"],
+            quote: "L'œil de lynx de la box. Loris décortique ta technique pour t'assurer progression et sécurité. Son énergie contagieuse et son exigence te feront dépasser tes limites avec le sourire.",
+            image: "/assets/coachloris.jpeg?v=2",
+            position: "object-[center_20%]"
         },
         {
             name: "Julia",
             role: "Coach",
             certifications: ["CrossFit Level 1 (en cours)"],
-            quote: "",
-            image: "https://images.unsplash.com/photo-1609899537878-48e0e0b39abf?auto=format&fit=crop&q=80",
-        },
-        {
-            name: "Elaura",
-            role: "Coach indépendant",
-            certifications: [],
-            quote: "",
-            image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80",
+            quote: "Patiente, pédagogue et rayonnante. Julia met un point d'honneur à rendre le fitness accessible à tous. Que tu fasses tes premiers squats ou que tu cherches la perf, elle t'accompagne avec passion.",
+            image: "/assets/CoachJulia.jpeg?v=2",
+            position: "object-top",
         }
     ];
 
@@ -45,11 +41,11 @@ export function Coaches() {
                     <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">L'Équipe</span>
                     <h2 className="text-5xl md:text-6xl font-heading font-bold mb-6 tracking-tight">Tes Coachs</h2>
                     <p className="text-lg text-black/70 font-body">
-                        Une équipe de passionnés, diplômés et expérimentés, dédiée à ta progression et ta sécurité.
+                        Au-delà des diplômes d'État classiques, tous nos coachs sont formés à la méthodologie officielle CrossFit. Une exigence unique dans la région pour te garantir le meilleur encadrement.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {coaches.map((coach, index) => (
                         <motion.div
                             key={index}
@@ -63,7 +59,7 @@ export function Coaches() {
                                 <img
                                     src={coach.image}
                                     alt={coach.name}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${coach.position || 'object-center'}`}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
                                 <div className="absolute bottom-6 left-6 right-6">

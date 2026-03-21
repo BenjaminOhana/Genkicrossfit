@@ -3,24 +3,28 @@ import { motion } from 'framer-motion';
 export function BoxGallery() {
     const images = [
         {
-            url: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80",
+            url: "/assets/bienvenue/IMG_6085.jpeg",
+            alt: "Athlètes en plein effort",
+            className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
+            position: "object-center"
+        },
+        {
+            url: "/assets/bienvenue/IMG_5926.jpeg", // Swapped dumbbells for the big branding logo to add diversity
+            alt: "Mur du logo CrossFit Genki",
+            className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1",
+            position: "object-[center_30%]" // The logo is higher up
+        },
+        {
+            url: "/assets/bienvenue/IMG_5817.jpeg",
+            alt: "Espace HYROX",
+            className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1",
+            position: "object-center"
+        },
+        {
+            url: "/assets/bienvenue/IMG_5802.jpeg", // Wide horizontal shot
             alt: "Vue globale de la box CrossFit Genki",
-            className: "md:col-span-2 md:row-span-2"
-        },
-        {
-            url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80",
-            alt: "Espace Open & Chill",
-            className: "md:col-span-1 md:row-span-1"
-        },
-        {
-            url: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80",
-            alt: "Zone haltérophilie",
-            className: "md:col-span-1 md:row-span-1"
-        },
-        {
-            url: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80",
-            alt: "Matériel CrossFit",
-            className: "md:col-span-2 md:row-span-1"
+            className: "col-span-2 row-span-1 md:col-span-2 md:row-span-1",
+            position: "object-[center_20%]" // The rigs and athletes are towards the middle-top
         }
     ];
 
@@ -60,7 +64,7 @@ export function BoxGallery() {
                     </motion.div>
                 </div>
 
-                <div className="flex flex-col md:grid md:grid-cols-4 md:grid-rows-2 gap-4 h-[800px] md:h-[600px]">
+                <div className="grid grid-cols-2 grid-rows-4 md:grid-cols-4 md:grid-rows-2 gap-4 h-[700px] md:h-[600px]">
                     {images.map((img, index) => (
                         <motion.div
                             key={index}
@@ -68,12 +72,12 @@ export function BoxGallery() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className={`relative rounded-2xl overflow-hidden group ${img.className} h-[200px] md:h-auto`}
+                            className={`relative rounded-2xl overflow-hidden group ${img.className}`}
                         >
                             <img
                                 src={img.url}
                                 alt={img.alt}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${img.position}`}
                             />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                         </motion.div>

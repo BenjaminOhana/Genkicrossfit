@@ -121,7 +121,7 @@ export function HyroxBanner() {
                                 </div>
 
                                 <div className="mt-16 flex flex-col items-center justify-center gap-4">
-                                    <a href="https://app.peppy.cool" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-4">
+                                    <a href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/offers/" target="_blank" rel="noopener noreferrer" className="btn-primary px-12 py-4">
                                         Réserver une séance HYROX
                                     </a>
                                     <p className="text-sm text-black/50 text-center mt-2">

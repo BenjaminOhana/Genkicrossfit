@@ -85,7 +85,7 @@ export function Hero() {
                     className="w-full flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 px-4"
                 >
                     <a
-                        href="https://app.peppy.cool"
+                        href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                         data-cta
                         target="_blank"
                         rel="noopener noreferrer"
@@ -108,11 +108,9 @@ export function Hero() {
                     </a>
 
                     <a
-                        href="#pricing"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-                        }}
+                        href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/offers/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="
                             inline-flex items-center justify-center
                             font-heading uppercase tracking-widest

@@ -39,7 +39,7 @@ export function Schedule() {
                     </motion.div>
 
                     <motion.a
-                        href="https://app.peppy.cool"
+                        href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                         target="_blank"
                         rel="noopener noreferrer"
                         initial={{ opacity: 0, x: 30 }}
@@ -106,7 +106,7 @@ export function Schedule() {
                         <p className="text-cream/60 text-sm mt-1 font-body">Disponible pendant les horaires d'ouverture de la box · Inclus dans tous les abonnements</p>
                     </div>
                     <a
-                        href="https://app.peppy.cool"
+                        href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                         target="_blank"
                         rel="noopener noreferrer"
                         data-cta

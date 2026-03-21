@@ -125,7 +125,7 @@ export function Pricing() {
 
                             <div className="p-8 md:p-12 pt-0 mt-auto">
                                 <a
-                                    href="https://app.peppy.cool"
+                                    href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/offers/"
                                     data-cta
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -170,7 +170,7 @@ export function Pricing() {
                         Tu hésites encore ? Viens tester gratuitement
                     </p>
                     <a
-                        href="https://app.peppy.cool"
+                        href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-secondary"

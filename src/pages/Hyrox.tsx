@@ -47,7 +47,7 @@ export function Hyrox() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full max-w-md mx-auto"
                     >
-                        <a href="https://app.peppy.cool" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-lg py-4 shadow-xl shadow-wine/20">
+                        <a href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/offers/" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-lg py-4 shadow-xl shadow-wine/20">
                             Rejoindre la prépa AEROX
                         </a>
                     </motion.div>
@@ -138,7 +138,7 @@ export function Hyrox() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <a href="https://app.peppy.cool" target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto px-12 py-4">
+                        <a href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/offers/" target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto px-12 py-4">
                             Réserver une séance AEROX
                         </a>
                         <span className="text-sm text-black/50 block sm:hidden">Accès via abonnement Full ou à l'unité</span>

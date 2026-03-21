@@ -51,7 +51,7 @@ export function Navbar() {
                     {/* Wordmark */}
                     <a
                         href="/"
-                        className={`relative z-50 flex items-center group transition-all duration-700 ease-out origin-left ${!isPastHero ? 'md:opacity-0 md:-translate-x-4 md:pointer-events-none' : 'md:opacity-100 md:translate-x-0'
+                        className={`relative z-[60] flex items-center group transition-all duration-700 ease-out origin-left ${!isPastHero ? 'md:opacity-0 md:-translate-x-4 md:pointer-events-none' : 'md:opacity-100 md:translate-x-0'
                             } opacity-100 translate-x-0`}
                     >
                         <span className="text-white font-heading tracking-widest uppercase">
@@ -80,7 +80,7 @@ export function Navbar() {
                             ))}
                         </div>
                         <a
-                            href="https://app.peppy.cool"
+                            href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary py-2 min-h-0 text-sm"
@@ -91,49 +91,49 @@ export function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-cream relative z-50 p-2 -mr-2"
+                        className="md:hidden text-cream relative z-[60] p-2 -mr-2"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
-
-                    {/* Mobile Menu Overlay */}
-                    <div
-                        className={`fixed inset-0 bg-black z-40 flex flex-col items-center justify-center transition-opacity duration-300 md:hidden ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                            }`}
-                    >
-                        <div className="flex flex-col items-center gap-8 text-xl">
-                            {navItems.map((item) => (
-                                <a
-                                    key={item.label}
-                                    href={item.href}
-                                    onClick={(e) => {
-                                        if (item.href.startsWith('#')) {
-                                            e.preventDefault();
-                                            handleNavClick(item.href);
-                                        } else {
-                                            handleNavClick(item.href);
-                                        }
-                                    }}
-                                    className="text-cream hover:text-wine font-heading uppercase tracking-widest transition-colors"
-                                >
-                                    {item.label}
-                                </a>
-                            ))}
-                            <a
-                                href="https://app.peppy.cool"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn-primary mt-4"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                Réserve ta séance gratuite
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </nav>
+
+            {/* Mobile Menu Overlay — outside nav for correct full-screen coverage */}
+            <div
+                className={`fixed inset-0 bg-black z-[55] flex flex-col items-center justify-center transition-opacity duration-300 md:hidden ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                    }`}
+            >
+                <div className="flex flex-col items-center gap-8 text-xl">
+                    {navItems.map((item) => (
+                        <a
+                            key={item.label}
+                            href={item.href}
+                            onClick={(e) => {
+                                if (item.href.startsWith('#')) {
+                                    e.preventDefault();
+                                    handleNavClick(item.href);
+                                } else {
+                                    handleNavClick(item.href);
+                                }
+                            }}
+                            className="text-cream hover:text-wine font-heading uppercase tracking-widest transition-colors"
+                        >
+                            {item.label}
+                        </a>
+                    ))}
+                    <a
+                        href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary mt-4"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                        Réserve ta séance gratuite
+                    </a>
+                </div>
+            </div>
         </>
     );
 }
