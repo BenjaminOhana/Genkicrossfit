@@ -12,7 +12,7 @@ export function Demystification() {
         {
             number: "02",
             imageMobile: "/assets/intensitemobile.jpeg",
-            imageDesktop: "/assets/adaptédesktop.jpeg",
+            imageDesktop: "/assets/IMG_5940 - Grande.jpeg?v=2",
             title: "L'intensité, c'est toi qui la choisis",
             description: "On ne te demande pas d'aller au bout de tes limites dès le premier jour. L'intensité est relative et toujours encadrée par un coach certifié."
         },
