@@ -3,28 +3,28 @@ import { motion } from 'framer-motion';
 export function BoxGallery() {
     const images = [
         {
-            url: "/assets/bienvenue/IMG_6085.jpeg",
+            url: "/assets/optimized/bienvenue/gallery-main.webp",
             alt: "Athlètes en plein effort",
             className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
             position: "object-center"
         },
         {
-            url: "/assets/bienvenue/IMG_5926.jpeg", // Swapped dumbbells for the big branding logo to add diversity
+            url: "/assets/optimized/bienvenue/gallery-logo.webp",
             alt: "Mur du logo CrossFit Genki",
             className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1",
-            position: "object-[center_30%]" // The logo is higher up
+            position: "object-[center_30%]"
         },
         {
-            url: "/assets/bienvenue/IMG_5817.jpeg",
+            url: "/assets/optimized/bienvenue/gallery-hyrox.webp",
             alt: "Espace HYROX",
             className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1",
             position: "object-center"
         },
         {
-            url: "/assets/bienvenue/IMG_5802.jpeg", // Wide horizontal shot
+            url: "/assets/optimized/bienvenue/gallery-wide.webp",
             alt: "Vue globale de la box CrossFit Genki",
             className: "col-span-2 row-span-1 md:col-span-2 md:row-span-1",
-            position: "object-[center_20%]" // The rigs and athletes are towards the middle-top
+            position: "object-[center_20%]"
         }
     ];
 
@@ -77,6 +77,7 @@ export function BoxGallery() {
                             <img
                                 src={img.url}
                                 alt={img.alt}
+                                loading="lazy"
                                 className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${img.position}`}
                             />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>

@@ -25,7 +25,7 @@ export function Hero() {
                 className="absolute inset-0 z-0 scale-110"
                 style={{ y: imageY }}
             >
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40"></div>
+                <div className="absolute inset-0 bg-[url('/assets/optimized/hero-bg.webp')] bg-cover bg-center opacity-40"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
 
                 {/* Watermark Logo — parallax plus doux */}
@@ -34,7 +34,7 @@ export function Hero() {
                     style={{ y: watermarkY }}
                 >
                     <img
-                        src="/assets/crossfit-genki-logo.svg"
+                        src="/assets/optimized/crossfit-genki-logo.svg"
                         alt=""
                         className="w-[85%] md:w-[60%] h-auto object-contain"
                         style={{ filter: 'grayscale(100%) brightness(3) contrast(0.6)' }}

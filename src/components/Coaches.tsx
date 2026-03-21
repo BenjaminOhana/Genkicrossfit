@@ -7,7 +7,7 @@ export function Coaches() {
             role: "Fondateur & Owner",
             certifications: ["CrossFit Level 1", "Level 2 (en cours)"],
             quote: "Toujours bienveillant (sauf pendant les burpees). Adrien n'entraîne pas seulement des athlètes, il bâtit une communauté. Son objectif ? Que tu te sentes ici comme à la maison et que tu sois fier(e) de ce dont tu es capable.",
-            image: "/assets/Coachadrien.jpeg?v=3",
+            image: "/assets/optimized/coach-adrien.webp",
             position: "object-top"
         },
         {
@@ -15,7 +15,7 @@ export function Coaches() {
             role: "Head Coach",
             certifications: ["CrossFit Level 2", "Level 3 (en cours)", "BPJEPS AF"],
             quote: "L'œil de lynx de la box. Loris décortique ta technique pour t'assurer progression et sécurité. Son énergie contagieuse et son exigence te feront dépasser tes limites avec le sourire.",
-            image: "/assets/coachloris.jpeg?v=2",
+            image: "/assets/optimized/coach-loris.webp",
             position: "object-[center_20%]"
         },
         {
@@ -23,7 +23,7 @@ export function Coaches() {
             role: "Coach",
             certifications: ["CrossFit Level 1 (en cours)"],
             quote: "Patiente, pédagogue et rayonnante. Julia met un point d'honneur à rendre le fitness accessible à tous. Que tu fasses tes premiers squats ou que tu cherches la perf, elle t'accompagne avec passion.",
-            image: "/assets/CoachJulia.jpeg?v=2",
+            image: "/assets/optimized/coach-julia.webp",
             position: "object-top",
         }
     ];
@@ -59,6 +59,7 @@ export function Coaches() {
                                 <img
                                     src={coach.image}
                                     alt={coach.name}
+                                    loading="lazy"
                                     className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${coach.position || 'object-center'}`}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>

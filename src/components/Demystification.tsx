@@ -4,22 +4,22 @@ export function Demystification() {
     const points = [
         {
             number: "01",
-            imageMobile: "/assets/adaptedesktop.jpeg",
-            imageDesktop: "/assets/adaptedesktop.jpeg",
+            imageMobile: "/assets/optimized/adapte.webp",
+            imageDesktop: "/assets/optimized/adapte.webp",
             title: "Adapté à toi",
             description: "Chaque mouvement est adapté à ton niveau. Que tu n'aies jamais mis les pieds dans une salle ou que tu sois sportif depuis 10 ans — ta place est ici."
         },
         {
             number: "02",
-            imageMobile: "/assets/intensitemobile.jpeg",
-            imageDesktop: "/assets/IMG_5940 - Grande.jpeg?v=2",
+            imageMobile: "/assets/optimized/intensite-mobile.webp",
+            imageDesktop: "/assets/optimized/intensite-desktop.webp",
             title: "L'intensité, c'est toi qui la choisis",
             description: "On ne te demande pas d'aller au bout de tes limites dès le premier jour. L'intensité est relative et toujours encadrée par un coach certifié."
         },
         {
             number: "03",
-            imageMobile: "/assets/famillemobile.jpeg",
-            imageDesktop: "/assets/familledesktop.jpeg",
+            imageMobile: "/assets/optimized/famille-mobile.webp",
+            imageDesktop: "/assets/optimized/famille-desktop.webp",
             title: "Plus qu'un sport, une famille",
             description: "Ici les gens se connaissent, s'encouragent, font des sorties ensemble. Tu viens pour le sport, tu restes pour les gens."
         }
@@ -37,8 +37,9 @@ export function Demystification() {
                     className="text-center mb-24"
                 >
                     <img
-                        src="/assets/crossfit-genki-logo.svg"
+                        src="/assets/optimized/crossfit-genki-logo.svg"
                         alt="CrossFit Genki"
+                        loading="lazy"
                         className="h-64 sm:h-72 md:h-96 w-auto object-contain mx-auto mb-10"
                     />
                     <h2 className="text-4xl md:text-5xl lg:text-5xl font-heading font-bold tracking-tight">Ta place est ici, peu importe ton niveau.</h2>
@@ -77,6 +78,9 @@ export function Demystification() {
                                         ></motion.div>
                                     </>
                             </div>
+
+                            {/* Voile léger uniforme pour lisibilité du texte */}
+                            <div className="absolute inset-0 z-[5] bg-black/25"></div>
 
                             {/* Gradient — fort en bas pour le texte, léger en haut */}
                             <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>

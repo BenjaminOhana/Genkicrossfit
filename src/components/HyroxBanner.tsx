@@ -9,7 +9,7 @@ export function HyroxBanner() {
         <section id="hyrox" className="relative bg-black w-full border-y border-white/5">
             {/* Banner / Hero part - Always visible */}
             <div className={`relative ${isExpanded ? 'py-16 md:py-24' : 'py-24 md:py-32'} flex flex-col items-center justify-center overflow-hidden transition-all duration-500`}>
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80')] bg-cover bg-center md:bg-right opacity-30 mix-blend-luminosity grayscale" />
+                <div className="absolute inset-0 bg-[url('/assets/optimized/hyrox-bg.webp')] bg-cover bg-center md:bg-right opacity-30 mix-blend-luminosity grayscale" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
                 <div className="absolute inset-0 bg-black/40" />
 

@@ -8,7 +8,7 @@ export function Hyrox() {
             <section id="hyrox-hero" className="min-h-[90vh] flex flex-col items-center justify-center relative overflow-hidden pt-20">
                 {/* Background image full opacity with custom overlay */}
                 <div
-                    className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80')] bg-cover bg-center"
+                    className="absolute inset-0 bg-[url('/assets/optimized/hero-bg.webp')] bg-cover bg-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
                 <div className="absolute inset-0 bg-black/40" /> {/* Extra darkening for text legibility */}

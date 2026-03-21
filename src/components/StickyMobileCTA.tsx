@@ -41,34 +41,37 @@ export function StickyMobileCTA() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0, transition: { duration: 0.2 } }}
-                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }} // smooth spring
-                    className="fixed bottom-6 inset-x-0 z-50 md:hidden flex justify-center px-5 pointer-events-none"
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="fixed bottom-5 inset-x-0 z-50 md:hidden flex justify-center px-4 pointer-events-none"
                 >
-                    {/* Style "Pilule flottante" minimaliste et premium */}
                     <a
                         href="https://app.peppy.cool/quicksell/clx0f0ehe4481031hn2h27ij4yj/book/trial/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-                            pointer-events-auto flex items-center justify-between w-full max-w-[340px]
-                            bg-[#121212]/80 backdrop-blur-xl border border-white/10 
-                            pl-6 pr-2 py-2 rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.5)] 
+                            pointer-events-auto flex items-center justify-between w-full max-w-[380px]
+                            bg-[#1a1a1a]/90 backdrop-blur-2xl border border-white/[0.08]
+                            pl-7 pr-2.5 py-2.5 rounded-full 
+                            shadow-[0_8px_32px_rgba(138,42,43,0.3),0_16px_48px_rgba(0,0,0,0.4)]
                             active:scale-[0.97] transition-all
                         "
                     >
-                        <div className="flex flex-col py-1">
-                            <span className="font-heading uppercase tracking-widest text-[11px] font-bold text-white leading-tight mb-0.5">
+                        <div className="flex flex-col py-0.5">
+                            <span className="font-heading uppercase tracking-[0.2em] text-[13px] font-bold text-white leading-tight mb-0.5">
                                 Séance gratuite
                             </span>
-                            <span className="text-[9px] font-body tracking-[0.15em] text-white/50 uppercase leading-tight">
-                                Sans engagement
+                            <span className="text-[10px] font-body tracking-[0.15em] text-white/40 uppercase leading-tight">
+                                Réserve · Sans engagement
                             </span>
                         </div>
-                        {/* Bouton rond d'action */}
-                        <div className="bg-wine text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
+                        {/* Bouton rond d'action avec pulse subtil */}
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-wine/40 rounded-full animate-ping" style={{ animationDuration: '2.5s' }}></div>
+                            <div className="relative bg-wine text-white w-12 h-12 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-wine/30">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </div>
                         </div>
                     </a>
                 </motion.div>

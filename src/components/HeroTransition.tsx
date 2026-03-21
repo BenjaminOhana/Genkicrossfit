@@ -22,7 +22,7 @@ export function HeroTransition() {
             >
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-15"
-                    style={{ backgroundImage: "url('/assets/C82B2367-1045-4122-AC1F-A5EDD87191C4.JPG')" }}
+                    style={{ backgroundImage: "url('/assets/optimized/hero-transition-bg.webp')" }}
                 />
                 {/* Gradient pour fondre les bords */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
