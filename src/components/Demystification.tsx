@@ -4,8 +4,8 @@ export function Demystification() {
     const points = [
         {
             number: "01",
-            imageMobile: "/assets/adaptédesktop.jpeg",
-            imageDesktop: "/assets/adaptédesktop.jpeg",
+            imageMobile: "/assets/adaptedesktop.jpeg",
+            imageDesktop: "/assets/adaptedesktop.jpeg",
             title: "Adapté à toi",
             description: "Chaque mouvement est adapté à ton niveau. Que tu n'aies jamais mis les pieds dans une salle ou que tu sois sportif depuis 10 ans — ta place est ici."
         },
