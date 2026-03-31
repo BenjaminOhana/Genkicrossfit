@@ -51,9 +51,9 @@ export function Coaches() {
                             key={index}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
+                            viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+                            className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group will-change-transform will-change-opacity"
                         >
                             <div className="relative h-72 overflow-hidden">
                                 <img

@@ -1,0 +1,6 @@
+# CrossFit Genki — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://genkicrossfit.netlify.app/sitemap.xml

@@ -7,21 +7,24 @@ export function Demystification() {
             imageMobile: "/assets/optimized/adapte.webp",
             imageDesktop: "/assets/optimized/adapte.webp",
             title: "Adapté à toi",
-            description: "Chaque mouvement est adapté à ton niveau. Que tu n'aies jamais mis les pieds dans une salle ou que tu sois sportif depuis 10 ans — ta place est ici."
+            description: "Chaque mouvement est adapté à ton niveau. Que tu n'aies jamais mis les pieds dans une salle ou que tu sois sportif depuis 10 ans — ta place est ici.",
+            bgPosMobile: "center",
         },
         {
             number: "02",
             imageMobile: "/assets/optimized/intensite-mobile.webp",
             imageDesktop: "/assets/optimized/intensite-desktop.webp",
             title: "L'intensité, c'est toi qui la choisis",
-            description: "On ne te demande pas d'aller au bout de tes limites dès le premier jour. L'intensité est relative et toujours encadrée par un coach certifié."
+            description: "On ne te demande pas d'aller au bout de tes limites dès le premier jour. L'intensité est relative et toujours encadrée par un coach certifié.",
+            bgPosMobile: "center",
         },
         {
             number: "03",
-            imageMobile: "/assets/optimized/famille-mobile.webp",
+            imageMobile: "/assets/optimized/IMG_5941.webp",
             imageDesktop: "/assets/optimized/famille-desktop.webp",
             title: "Plus qu'un sport, une famille",
-            description: "Ici les gens se connaissent, s'encouragent, font des sorties ensemble. Tu viens pour le sport, tu restes pour les gens."
+            description: "Ici les gens se connaissent, s'encouragent, font des sorties ensemble. Tu viens pour le sport, tu restes pour les gens.",
+            bgPosMobile: "center 125%",
         }
     ];
 
@@ -32,9 +35,9 @@ export function Demystification() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-24"
+                    className="text-center mb-24 will-change-transform will-change-opacity"
                 >
                     <img
                         src="/assets/optimized/crossfit-genki-logo.svg"
@@ -52,28 +55,28 @@ export function Demystification() {
                             key={index}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-40px" }}
+                            viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
-                            className="relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-700 cursor-default"
+                            className="relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-700 cursor-default will-change-transform will-change-opacity"
                             style={{ minHeight: '420px' }}
                         >
                             {/* Background Image — effet focus au scroll */}
                             <div className="absolute inset-0 z-0 overflow-hidden bg-black">
                                     <>
                                         <motion.div
-                                            initial={{ opacity: 0.35, filter: 'grayscale(70%)', scale: 1 }}
-                                            whileInView={{ opacity: 0.85, filter: 'grayscale(0%)', scale: 1.05 }}
-                                            viewport={{ margin: "-25% 0px -25% 0px" }} 
+                                            initial={{ opacity: 0.45, scale: 1 }}
+                                            whileInView={{ opacity: 0.90, scale: 1.05 }}
+                                            viewport={{ margin: "-25% 0px -25% 0px", amount: 0.4 }} 
                                             transition={{ duration: 0.8, ease: "easeOut" }}
-                                            className="w-full h-full bg-cover bg-center group-hover:!opacity-95 group-hover:!scale-105 group-hover:!grayscale-0 transition-transform duration-1000 ease-out md:hidden"
-                                            style={{ backgroundImage: `url('${point.imageMobile}')` }}
+                                            className="w-full h-full bg-cover bg-center group-hover:!opacity-100 group-hover:!scale-105 transition-transform duration-1000 ease-out md:hidden will-change-transform will-change-opacity"
+                                            style={{ backgroundImage: `url('${point.imageMobile}')`, backgroundPosition: point.bgPosMobile }}
                                         ></motion.div>
                                         <motion.div
-                                            initial={{ opacity: 0.35, filter: 'grayscale(70%)', scale: 1 }}
-                                            whileInView={{ opacity: 0.85, filter: 'grayscale(0%)', scale: 1.05 }}
-                                            viewport={{ margin: "-25% 0px -25% 0px" }} 
+                                            initial={{ opacity: 0.45, scale: 1 }}
+                                            whileInView={{ opacity: 0.90, scale: 1.05 }}
+                                            viewport={{ margin: "-25% 0px -25% 0px", amount: 0.4 }} 
                                             transition={{ duration: 0.8, ease: "easeOut" }}
-                                            className="w-full h-full bg-cover bg-center group-hover:!opacity-95 group-hover:!scale-105 group-hover:!grayscale-0 transition-transform duration-1000 ease-out hidden md:block"
+                                            className="w-full h-full bg-cover bg-center group-hover:!opacity-100 group-hover:!scale-105 transition-transform duration-1000 ease-out hidden md:block will-change-transform will-change-opacity"
                                             style={{ backgroundImage: `url('${point.imageDesktop}')` }}
                                         ></motion.div>
                                     </>
@@ -101,9 +104,9 @@ export function Demystification() {
                                 <motion.div
                                     initial={{ opacity: 0.5, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ margin: "-25% 0px -25% 0px" }} // S'active en même temps que l'image
+                                    viewport={{ margin: "-25% 0px -25% 0px", amount: 0.4 }} // S'active en même temps que l'image
                                     transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-                                    className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 transform transition-transform duration-500 group-hover:-translate-y-1"
+                                    className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 transform transition-transform duration-500 group-hover:-translate-y-1 will-change-transform will-change-opacity"
                                 >
                                     <div className="flex-1 max-w-2xl">
                                         <h3 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-wide mb-3 text-white">
@@ -130,9 +133,9 @@ export function Demystification() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
-                    className="mt-20 text-center"
+                    className="mt-20 text-center will-change-transform will-change-opacity"
                 >
                     <p className="text-xl text-[#1a1a1a]/60 font-body italic mb-8 max-w-2xl mx-auto">
                         Un essai suffit. Réserve le tien.

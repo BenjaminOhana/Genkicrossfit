@@ -1,14 +1,12 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Users, Timer, Trophy, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Users, Timer, Trophy } from 'lucide-react';
 
 export function HyroxBanner() {
-    const [isExpanded, setIsExpanded] = useState(false);
 
     return (
         <section id="hyrox" className="relative bg-black w-full border-y border-white/5">
             {/* Banner / Hero part - Always visible */}
-            <div className={`relative ${isExpanded ? 'py-16 md:py-24' : 'py-24 md:py-32'} flex flex-col items-center justify-center overflow-hidden transition-all duration-500`}>
+            <div className="relative py-16 md:py-24 flex flex-col items-center justify-center overflow-hidden transition-all duration-500">
                 <div className="absolute inset-0 bg-[url('/assets/optimized/hyrox-bg.webp')] bg-cover bg-center md:bg-right opacity-30 mix-blend-luminosity grayscale" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
                 <div className="absolute inset-0 bg-black/40" />
@@ -43,31 +41,11 @@ export function HyroxBanner() {
                     >
                         La course approche. Ne la subissez pas, dominez-la.
                     </motion.p>
-
-                    <motion.button
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        className="flex items-center gap-2 text-white/80 hover:text-white uppercase tracking-widest text-sm md:text-base font-heading transition-colors border-b border-white/30 hover:border-white pb-1"
-                    >
-                        {isExpanded ? "Réduire les infos" : "Découvrir le programme"}
-                        {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                    </motion.button>
                 </div>
             </div>
 
-            {/* Expandable Content */}
-            <AnimatePresence>
-                {isExpanded && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                    >
+            {/* Always Visible Content */}
+            <div className="overflow-hidden">
                         {/* Stats Banner */}
                         <div className="bg-wine border-y border-white/10 relative z-20 shadow-2xl">
                             <div className="max-w-7xl mx-auto px-4 py-8">
@@ -130,9 +108,7 @@ export function HyroxBanner() {
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            </div>
         </section>
     );
 }

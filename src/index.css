@@ -26,3 +26,12 @@
     @apply inline-flex items-center justify-center px-7 py-3 rounded-full bg-transparent border border-wine text-wine font-heading text-sm tracking-widest uppercase transition-all duration-300 hover:bg-wine hover:text-white;
   }
 }
+
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+  .will-change-opacity {
+    will-change: opacity;
+  }
+}

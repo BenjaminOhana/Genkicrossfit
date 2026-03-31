@@ -4,15 +4,15 @@ import { Clock, ExternalLink, Calendar } from 'lucide-react';
 const scheduleData = [
     {
         day: "Lundi — Jeudi",
-        slots: ["9h00 – 10h00", "12h00 – 13h00", "17h30 – 18h30", "18h30 – 19h30"],
+        slots: ["9h00 – 20h30"],
     },
     {
         day: "Vendredi",
-        slots: ["12h00 – 13h00", "17h30 – 18h30", "18h30 – 19h30"],
+        slots: ["12h00 – 20h30"],
     },
     {
         day: "Samedi",
-        slots: ["9h00 – 10h00", "10h00 – 11h00"],
+        slots: ["9h00 – 12h00"],
     },
     {
         day: "Dimanche",

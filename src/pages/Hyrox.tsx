@@ -1,7 +1,26 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Timer, Trophy } from 'lucide-react';
 
 export function Hyrox() {
+    useEffect(() => {
+        document.title = "HYROX Training à Talange, Thionville & Metz | CrossFit Genki";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        const canonical = document.querySelector('link[rel="canonical"]');
+        const prevDesc = metaDesc?.getAttribute('content') || '';
+        const prevCanonical = canonical?.getAttribute('href') || '';
+        if (metaDesc) {
+            metaDesc.setAttribute('content', "Prépare-toi pour HYROX chez CrossFit Genki à Talange (57). Entraînements spécifiques course + fonctionnel. 50+ athlètes préparés. Coaching certifié. Essai gratuit.");
+        }
+        if (canonical) {
+            canonical.setAttribute('href', 'https://genkicrossfit.netlify.app/hyrox');
+        }
+        return () => {
+            document.title = "CrossFit Genki — Salle de CrossFit à Talange près de Metz | Séance d'essai gratuite";
+            if (metaDesc) metaDesc.setAttribute('content', prevDesc);
+            if (canonical) canonical.setAttribute('href', prevCanonical);
+        };
+    }, []);
     return (
         <div className="w-full bg-black">
             {/* 1. Hero impactant (Option A) */}

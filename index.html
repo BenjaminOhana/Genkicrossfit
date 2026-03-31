@@ -1,18 +1,395 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/optimized/crossfit-genki-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CrossFit Genki | La box de référence</title>
-    <meta name="description" content="Découvre CrossFit Genki, au-delà des standards : une véritable méthodologie CrossFit certifiée et des coachs dédiés à ta progression. Réserve ta séance d'essai !" />
+
+    <!-- SEO Primary -->
+    <title>CrossFit Genki — Salle de CrossFit à Talange près de Metz | Séance d'essai gratuite</title>
+    <meta name="description" content="Salle de CrossFit affiliée à Talange (57). Coaching certifié adapté à tous les niveaux. Communauté bienveillante. HYROX Training. Séance d'essai gratuite, sans engagement. ⭐ 5/5 Google (38 avis)." />
+    <link rel="canonical" href="https://genkicrossfit.netlify.app/" />
+
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Open Graph / Réseaux Sociaux -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="CrossFit Genki | Plus qu'un sport, une famille" />
-    <meta property="og:description" content="400 m² de bonne énergie, des coachs certifiés et une communauté qui te tire vers le haut. Ta première séance est offerte." />
-    <!-- L'URL a été mise à jour avec ton vrai nom de domaine Netlify -->
+    <meta property="og:url" content="https://genkicrossfit.netlify.app/" />
+    <meta property="og:title" content="CrossFit Genki — Ta place est ici." />
+    <meta property="og:description" content="Salle de CrossFit affiliée à Talange. Coaching certifié, adapté à tous. Communauté unique. Séance d'essai gratuite." />
     <meta property="og:image" content="https://genkicrossfit.netlify.app/assets/og-image.png" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="CrossFit Genki" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CrossFit Genki — Ta place est ici." />
+    <meta name="twitter:description" content="Salle de CrossFit affiliée à Talange (57). Coaching certifié, adapté à tous. Séance d'essai gratuite, sans engagement." />
+    <meta name="twitter:image" content="https://genkicrossfit.netlify.app/assets/og-image.png" />
+
+    <!-- Geo Meta Tags (SEO Local) -->
+    <meta name="geo.region" content="FR-57" />
+    <meta name="geo.placename" content="Talange" />
+    <meta name="geo.position" content="49.2310;6.1670" />
+    <meta name="ICBM" content="49.2310, 6.1670" />
+
+    <!-- Schema.org — WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "CrossFit Genki",
+      "url": "https://genkicrossfit.netlify.app/",
+      "description": "Salle de CrossFit affiliée à Talange (57), près de Metz et Thionville. Coaching certifié CrossFit, préparation HYROX, séance d'essai gratuite.",
+      "inLanguage": "fr"
+    }
+    </script>
+
+    <!-- Schema.org — GymOrFitnessCenter (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GymOrFitnessCenter",
+      "name": "CrossFit Genki",
+      "alternateName": "CrossFit Genki Talange",
+      "description": "CrossFit Genki est une salle de CrossFit officiellement affiliée, située à Talange (57), à 12 minutes de Metz et 15 minutes de Thionville. Ouverte depuis l'été 2024, elle propose du coaching certifié CrossFit adapté à tous les niveaux, de la préparation HYROX avec la méthode Aerox, et un espace Open & Chill de 120 m². Une box à taille humaine de 400 m² avec une communauté bienveillante de plus de 130 adhérents. Séance d'essai gratuite, toutes les offres sans engagement. Note Google : 5/5 avec 38 avis.",
+      "url": "https://genkicrossfit.netlify.app/",
+      "telephone": "+33689082685",
+      "email": "contact.crossfitgenki@gmail.com",
+      "image": "https://genkicrossfit.netlify.app/assets/og-image.png",
+      "logo": "https://genkicrossfit.netlify.app/assets/optimized/crossfit-genki-logo.svg",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pôle d'activité de Talange Nord",
+        "addressLocality": "Talange",
+        "postalCode": "57525",
+        "addressRegion": "Moselle",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.2310,
+        "longitude": 6.1670
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Talange" },
+        { "@type": "City", "name": "Metz" },
+        { "@type": "City", "name": "Thionville" },
+        { "@type": "City", "name": "Hagondange" },
+        { "@type": "City", "name": "Maizières-lès-Metz" },
+        { "@type": "City", "name": "Amnéville" },
+        { "@type": "City", "name": "Uckange" },
+        { "@type": "City", "name": "Fameck" },
+        { "@type": "City", "name": "Woippy" },
+        { "@type": "City", "name": "Yutz" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "38",
+        "reviewCount": "38"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Camille S." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "J'ai récemment découvert CrossFit Genki, et je suis absolument ravie ! L'équipe est accueillante, professionnelle et vraiment attentive à chaque personne, quel que soit son niveau."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Nicolas" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Super ambiance, coachs motivants et très pros ! Les séances sont variées, bien encadrées, et l'esprit de communauté est top. Je vois de vrais progrès."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Pauline S." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Au menu : bienveillance et dépassement de soi. Je recommande à 1000%."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Pierre R." },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Un personnel accueillant et compétent dans une salle très bien équipée et idéalement située."
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/crossfitgenki/",
+        "https://www.facebook.com/crossfitgenki",
+        "https://crossfit.com/gym/34675/crossfit-genki"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Adrien Marquis",
+        "jobTitle": "Fondateur & Coach CrossFit Level 1"
+      },
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Loris Duval",
+          "jobTitle": "Head Coach — CrossFit Level 2, BPJEPS AF"
+        },
+        {
+          "@type": "Person",
+          "name": "Julia",
+          "jobTitle": "Coach CrossFit"
+        },
+        {
+          "@type": "Person",
+          "name": "Elaura",
+          "jobTitle": "Coach indépendant"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 4
+      },
+      "foundingDate": "2024",
+      "knowsAbout": ["CrossFit", "HYROX", "Functional Fitness", "Coaching sportif", "Entraînement fonctionnel", "Remise en forme"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Formules CrossFit Genki",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Séance d'essai gratuite",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "description": "Première séance d'essai offerte, sans engagement"
+          },
+          {
+            "@type": "Offer",
+            "name": "Full Access",
+            "price": "95",
+            "priceCurrency": "EUR",
+            "description": "Jusqu'à 5 séances de coaching par semaine — formule la plus populaire, sans engagement",
+            "eligibleDuration": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
+          },
+          {
+            "@type": "Offer",
+            "name": "10 Séances",
+            "price": "75",
+            "priceCurrency": "EUR",
+            "description": "10 séances de coaching par mois, sans engagement",
+            "eligibleDuration": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
+          },
+          {
+            "@type": "Offer",
+            "name": "5 Séances",
+            "price": "55",
+            "priceCurrency": "EUR",
+            "description": "5 séances de coaching par mois, sans engagement",
+            "eligibleDuration": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Drop-in",
+            "price": "20",
+            "priceCurrency": "EUR",
+            "description": "Séance à l'unité"
+          }
+        ]
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "09:00",
+          "closes": "10:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "12:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "16:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Tuesday",
+          "opens": "09:00",
+          "closes": "11:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Tuesday",
+          "opens": "12:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Tuesday",
+          "opens": "16:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "09:00",
+          "closes": "10:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "12:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "16:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "09:00",
+          "closes": "10:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "12:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "16:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "12:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "16:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "12:00"
+        }
+      ],
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Espace principal de 280 m²", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Espace Open & Chill de 120 m²", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking gratuit", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Vestiaires", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Bar / Accueil", "value": true }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org — FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Je n'ai jamais fait de sport, c'est pour moi ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolument. La majorité de nos membres n'étaient pas sportifs en arrivant. Chaque mouvement est adapté à ton niveau par un coach certifié CrossFit. Tu progresses à ton rythme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le CrossFit, c'est pas trop violent / intense ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. L'intensité est relative et toujours contrôlée par un coach certifié. C'est toi qui décides de ton effort. Le coach est là pour t'accompagner, pas pour te pousser au-delà de tes limites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se passe la première séance chez CrossFit Genki à Talange ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tu réserves en ligne en 2 clics, tu viens 10 min avant, on t'accueille et on te briefe. Le coach adapte l'entraînement du jour à ton niveau. Tu repars avec le sourire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "C'est quoi HYROX ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HYROX est un format de compétition fitness qui mélange course à pied et exercices fonctionnels. Chez CrossFit Genki à Talange, on propose de vrais cours spécifiques HYROX avec des thèmes d'entraînement créés par Aerox. Plus de 50 personnes déjà préparées."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels sont les horaires de CrossFit Genki ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lundi à jeudi : 9h-10h, 12h-14h, 16h30-20h30. Vendredi : 12h-14h, 16h30-20h30. Samedi : 9h-12h. Dimanche : fermé (ouverture prochaine). La salle est située au Pôle d'activité de Talange Nord, 57525 Talange."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Il faut un engagement minimum pour s'inscrire au CrossFit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Toutes nos offres sont sans engagement. Tu peux commencer par une séance d'essai gratuite, puis choisir la formule qui te convient. Pas de contrat long, pas de piège."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Où est la salle CrossFit Genki exactement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pôle d'activité de Talange Nord, 57525 Talange, à côté de XL Enseigne. Facile d'accès en voiture depuis Metz (12 min) et Thionville (15 min). Parking gratuit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte l'abonnement CrossFit Genki ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "À partir de 55€/mois pour 5 séances. Le Full Access (le plus populaire) est à 95€/mois pour jusqu'à 5 séances par semaine. Offres étudiants et forces de l'ordre disponibles. Toutes les offres sont sans engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que CrossFit Genki est une salle affiliée CrossFit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. CrossFit Genki est officiellement affiliée à CrossFit depuis 2024. Nos coachs sont certifiés CrossFit (Level 1, Level 2). C'est un gage de qualité et de méthodologie certifiée."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qui différencie CrossFit Genki des autres salles de CrossFit à Metz et Thionville ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'ambiance familiale, le coaching certifié et personnalisé, une box à taille humaine de 400 m², des offres sans engagement, et une communauté soudée. C'est ce qui ressort de nos 38 avis Google, tous à 5 étoiles."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

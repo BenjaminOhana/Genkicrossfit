@@ -28,7 +28,7 @@ export function Footer() {
                     <div className="space-y-6">
                         <h4 className="font-heading text-xl uppercase tracking-wider text-wine">Contact</h4>
                         <div className="space-y-4">
-                            <a href="https://maps.app.goo.gl/xxx" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-cream/80 hover:text-white transition-colors group">
+                            <a href="https://www.google.com/maps/search/?api=1&query=CrossFit+Genki+Talange" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-cream/80 hover:text-white transition-colors group">
                                 <MapPin size={20} className="shrink-0 mt-1 text-wine" />
                                 <span className="text-sm">Pôle d'activité de Talange Nord<br />57525 Talange</span>
                             </a>
@@ -98,13 +98,39 @@ export function Footer() {
                     </a>
                 </div>
 
-                <div className="pt-8 border-t border-gray/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
+                <div className="pt-8 pb-8 border-t border-gray/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
                     <p>&copy; {currentYear} CrossFit Genki. Tous droits réservés.</p>
                     <div className="flex gap-6">
                         <a href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</a>
                         <a href="/cgv" className="hover:text-white transition-colors">CGV</a>
+                        <a href="/politique-confidentialite" className="hover:text-white transition-colors">Confidentialité</a>
                     </div>
                 </div>
+            </div>
+
+            {/* Signature Banner */}
+            <div className="w-full border-t border-white/5 bg-black/40 py-16 flex flex-col items-center justify-center text-center px-4 relative">
+                <div className="w-16 h-px bg-wine/30 mb-8"></div>
+                
+                <p className="font-serif italic text-lg md:text-xl text-cream/80 mb-5 font-light tracking-wide">
+                    « Quand un site a une âme, ça se sent. »
+                </p>
+                
+                <p className="text-cream/50 font-body text-xs md:text-sm mb-8 tracking-wide">
+                    Conçu par <span className="font-medium text-cream/80">Benjamin Poulet</span> — Entrepreneur Aligné
+                </p>
+                
+                <a 
+                    href="https://entrepreneuraligne.fr" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-3 text-wine hover:text-white transition-colors font-heading tracking-widest uppercase text-xs"
+                >
+                    Révèle l'âme du tien
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+
+                <div className="w-16 h-px bg-wine/30 mt-8"></div>
             </div>
         </footer>
     );

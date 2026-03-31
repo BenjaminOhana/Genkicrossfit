@@ -71,9 +71,9 @@ export function Pricing() {
                             key={index}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
+                            viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className={`rounded-2xl flex flex-col relative overflow-hidden transition-all duration-300 ${plan.highlight
+                            className={`rounded-2xl flex flex-col relative overflow-hidden transition-all duration-300 will-change-transform will-change-opacity ${plan.highlight
                                 ? 'bg-black text-cream shadow-2xl scale-100 md:scale-105 z-10 border-none'
                                 : 'bg-white border border-black/10 shadow-sm hover:shadow-xl hover:-translate-y-2'
                                 }`}

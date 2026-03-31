@@ -17,7 +17,7 @@ export function HeroTransition() {
 
             {/* Photo de fond — très sombre, effet d'ambiance */}
             <motion.div
-                className="absolute inset-0 z-0 scale-110"
+                className="absolute inset-0 z-0 scale-110 will-change-transform"
                 style={{ y: imageY }}
             >
                 <div
@@ -35,9 +35,9 @@ export function HeroTransition() {
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-80px" }}
+                        viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="md:col-span-7 lg:col-span-8"
+                        className="md:col-span-7 lg:col-span-8 will-change-transform will-change-opacity"
                     >
                         <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold uppercase tracking-tight text-white/90 leading-[1.1] mb-2">
                             Ici, on ne vient pas<br />juste transpirer.
@@ -48,10 +48,10 @@ export function HeroTransition() {
                                 vivant.
                                 {/* Underline animé au scroll */}
                                 <motion.span
-                                    className="absolute left-0 bottom-1 md:bottom-2 h-[3px] md:h-[4px] bg-wine rounded-full"
-                                    initial={{ width: "0%" }}
-                                    whileInView={{ width: "100%" }}
-                                    viewport={{ once: true, margin: "-20px" }}
+                                    className="absolute left-0 bottom-1 md:bottom-2 h-[3px] md:h-[4px] bg-wine rounded-full w-full origin-left will-change-transform"
+                                    initial={{ scaleX: 0 }}
+                                    whileInView={{ scaleX: 1 }}
+                                    viewport={{ once: true, amount: 0.4 }}
                                     transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                                 />
                             </span>
@@ -64,9 +64,9 @@ export function HeroTransition() {
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-80px" }}
+                            viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                            className="flex items-center gap-4 group"
+                            className="flex items-center gap-4 group will-change-transform will-change-opacity"
                         >
                             <span className="w-1 h-5 bg-wine/30 group-hover:bg-wine transition-colors duration-300"></span>
                             <p className="text-cream/60 font-body text-sm md:text-base tracking-wider group-hover:text-white transition-colors duration-300 uppercase">
@@ -77,9 +77,9 @@ export function HeroTransition() {
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-80px" }}
+                            viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                            className="flex items-center gap-4 group"
+                            className="flex items-center gap-4 group will-change-transform will-change-opacity"
                         >
                             <span className="w-1 h-5 bg-wine/30 group-hover:bg-wine transition-colors duration-300"></span>
                             <p className="text-cream/60 font-body text-sm md:text-base tracking-wider group-hover:text-white transition-colors duration-300 uppercase">
@@ -90,9 +90,9 @@ export function HeroTransition() {
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-80px" }}
+                            viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-                            className="flex items-center gap-4 group"
+                            className="flex items-center gap-4 group will-change-transform will-change-opacity"
                         >
                             <span className="w-1 h-5 bg-wine/30 group-hover:bg-wine transition-colors duration-300"></span>
                             <p className="text-cream/60 font-body text-sm md:text-base tracking-wider group-hover:text-white transition-colors duration-300 uppercase">

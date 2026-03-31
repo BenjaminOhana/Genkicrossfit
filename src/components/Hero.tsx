@@ -47,16 +47,7 @@ export function Hero() {
                 className="relative z-10 max-w-6xl mx-auto px-6 text-center flex flex-col items-center"
                 style={{ y: contentY, opacity: contentOpacity }}
             >
-                <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                    className="mb-6 flex items-center justify-center gap-2 opacity-50 hover:opacity-100 transition-opacity"
-                >
-                    <span className="w-1 h-1 rounded-full bg-wine"></span>
-                    <span className="text-white text-[11px] md:text-[13px] font-medium tracking-[0.2em] uppercase text-center">Salle affiliée CrossFit et HYROX</span>
-                    <span className="w-1 h-1 rounded-full bg-wine"></span>
-                </motion.div>
+
 
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
@@ -129,19 +120,32 @@ export function Hero() {
                 </motion.div>
             </motion.div>
 
-            {/* Bottom badge — très discret */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1.5 }}
-                className="absolute bottom-8 w-full px-4 z-10 flex flex-wrap justify-center items-center gap-2 md:gap-4 text-cream/70 text-[10px] md:text-xs font-heading tracking-[0.15em] md:tracking-[0.25em] uppercase"
-            >
-                <span>⭐ 5/5 sur Google</span>
-                <span className="text-cream/20">·</span>
-                <span>Toutes nos offres sans engagement</span>
-                <span className="text-cream/20">·</span>
-                <span>Talange (57)</span>
-            </motion.div>
+            {/* Bottom badges */}
+            <div className="absolute bottom-6 md:bottom-8 w-full z-10 flex flex-col items-center gap-3">
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+                    className="flex items-center justify-center gap-2 opacity-50 hover:opacity-100 transition-opacity mx-4"
+                >
+                    <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-wine"></span>
+                    <span className="text-white text-[10px] md:text-[12px] font-medium tracking-[0.2em] uppercase text-center">Salle affiliée CrossFit et HYROX</span>
+                    <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-wine"></span>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                    className="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-cream/70 text-[10px] md:text-xs font-heading tracking-[0.15em] md:tracking-[0.25em] uppercase px-4"
+                >
+                    <span>⭐ 5/5 sur Google</span>
+                    <span className="hidden md:inline text-cream/20">·</span>
+                    <span className="hidden md:inline">Toutes nos offres sans engagement</span>
+                    <span className="hidden md:inline text-cream/20">·</span>
+                    <span className="hidden md:inline">Talange (57)</span>
+                </motion.div>
+            </div>
         </section>
     );
 }
