@@ -16,7 +16,7 @@ export function PolitiqueConfidentialite() {
                     ← Retour à l'accueil
                 </Link>
                 <h1 className="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight mb-4">Politique de Confidentialité</h1>
-                <p className="text-cream/40 text-sm mb-12 font-body">Dernière mise à jour : 31 mars 2026</p>
+                <p className="text-cream/40 text-sm mb-12 font-body">Dernière mise à jour : 1 avril 2026</p>
 
                 {/* Intro */}
                 <section className="mb-10">
@@ -29,8 +29,10 @@ export function PolitiqueConfidentialite() {
                 <section className="mb-10">
                     <h2 className="text-lg md:text-xl font-heading text-wine uppercase tracking-wider mb-4">1. Responsable du traitement</h2>
                     <ul className="text-cream/70 font-body leading-relaxed space-y-2 pl-0 list-none">
-                        <li><strong className="text-cream/90">SAS A2MG CrossFit</strong></li>
-                        <li>Pôle d'activité de Talange Nord, 57525 Talange, France</li>
+                        <li><strong className="text-cream/90">SAS A2MG CROSSFIT</strong> (CrossFit Genki)</li>
+                        <li>Siège social : 52 Rue Saint-François, 57535 Marange-Silvange, France</li>
+                        <li>Établissement : 6 Rue des Artisans, 57525 Talange</li>
+                        <li>SIRET : 928 008 853 00022 — RCS Metz</li>
                         <li>Représentée par Adrien Marquis, Président</li>
                         <li>Email : contact.crossfitgenki@gmail.com</li>
                         <li>Téléphone : 06 89 08 26 85</li>

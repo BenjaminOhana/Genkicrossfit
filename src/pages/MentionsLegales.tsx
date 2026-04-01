@@ -16,7 +16,7 @@ export function MentionsLegales() {
                     ← Retour à l'accueil
                 </Link>
                 <h1 className="text-3xl md:text-5xl font-heading font-bold text-white tracking-tight mb-4">Mentions Légales</h1>
-                <p className="text-cream/40 text-sm mb-12 font-body">Dernière mise à jour : 31 mars 2026</p>
+                <p className="text-cream/40 text-sm mb-12 font-body">Dernière mise à jour : 1 avril 2026</p>
 
                 {/* 1. Éditeur */}
                 <section className="mb-10">
@@ -25,13 +25,17 @@ export function MentionsLegales() {
                         Le présent site internet <strong className="text-cream/90">genkicrossfit.netlify.app</strong> (ci-après « le Site ») est édité par :
                     </p>
                     <ul className="text-cream/70 font-body leading-relaxed space-y-2 pl-0 list-none">
-                        <li><strong className="text-cream/90">Dénomination sociale :</strong> SAS A2MG CrossFit</li>
+                        <li><strong className="text-cream/90">Dénomination sociale :</strong> A2MG CROSSFIT</li>
+                        <li><strong className="text-cream/90">Nom commercial :</strong> CrossFit Genki</li>
                         <li><strong className="text-cream/90">Forme juridique :</strong> Société par Actions Simplifiée (SAS)</li>
                         <li><strong className="text-cream/90">Capital social :</strong> 2 000 €</li>
-                        <li><strong className="text-cream/90">Siège social :</strong> Pôle d'activité de Talange Nord, 57525 Talange, France</li>
-                        <li><strong className="text-cream/90">SIRET :</strong> <span className="italic text-cream/50">[À compléter]</span></li>
-                        <li><strong className="text-cream/90">RCS :</strong> <span className="italic text-cream/50">[À compléter — ville d'immatriculation + numéro]</span></li>
-                        <li><strong className="text-cream/90">N° TVA intracommunautaire :</strong> <span className="italic text-cream/50">[À compléter si applicable]</span></li>
+                        <li><strong className="text-cream/90">Siège social :</strong> 52 Rue Saint-François, 57535 Marange-Silvange, France</li>
+                        <li><strong className="text-cream/90">Adresse de l'établissement :</strong> 6 Rue des Artisans — Pôle d'activité de Talange Nord, 57525 Talange</li>
+                        <li><strong className="text-cream/90">SIREN :</strong> 928 008 853</li>
+                        <li><strong className="text-cream/90">SIRET (établissement) :</strong> 928 008 853 00022</li>
+                        <li><strong className="text-cream/90">RCS :</strong> Metz — 928 008 853</li>
+                        <li><strong className="text-cream/90">Code APE :</strong> 9311Z — Gestion d'installations sportives</li>
+                        <li><strong className="text-cream/90">N° TVA intracommunautaire :</strong> FR 83 928008853</li>
                         <li><strong className="text-cream/90">Téléphone :</strong> 06 89 08 26 85</li>
                         <li><strong className="text-cream/90">Email :</strong> contact.crossfitgenki@gmail.com</li>
                     </ul>
@@ -41,7 +45,7 @@ export function MentionsLegales() {
                 <section className="mb-10">
                     <h2 className="text-lg md:text-xl font-heading text-wine uppercase tracking-wider mb-4">2. Directeur de la publication</h2>
                     <p className="text-cream/70 font-body leading-relaxed">
-                        Le directeur de la publication du Site est <strong className="text-cream/90">Monsieur Adrien Marquis</strong>, en sa qualité de représentant légal de la SAS A2MG CrossFit.
+                        Le directeur de la publication du Site est <strong className="text-cream/90">Monsieur Adrien Marquis</strong>, en sa qualité de Président de la SAS A2MG CROSSFIT.
                     </p>
                 </section>
 
