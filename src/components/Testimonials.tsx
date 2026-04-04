@@ -58,8 +58,8 @@ export function Testimonials() {
                 </div>
 
                 <div
-                    className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pb-8 -mx-6 px-6 md:mx-0 md:px-0"
-                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pb-8 -mx-6 px-6 md:mx-0 md:px-0"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
                 >
                     <style dangerouslySetInnerHTML={{
                         __html: `
@@ -68,11 +68,11 @@ export function Testimonials() {
                     {reviews.map((review, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.15 }}
-                            className="bg-zinc-900 border border-zinc-800 p-6 md:p-8 rounded-2xl relative min-w-[280px] w-[80vw] sm:w-[350px] md:min-w-0 md:w-auto snap-center flex-none flex flex-col justify-between"
+                            viewport={{ once: true, amount: 0.1 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="bg-zinc-900 border border-zinc-800 p-6 md:p-8 rounded-2xl relative min-w-[85vw] sm:min-w-[350px] md:min-w-0 md:w-auto flex-none flex flex-col justify-between"
                         >
                             <div className="flex text-wine mb-4 md:mb-6">
                                 {[...Array(review.rating)].map((_, i) => (
