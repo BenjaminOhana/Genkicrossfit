@@ -31,7 +31,7 @@ export function Schedule() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">Emploi du temps</span>
                         <h2 className="text-5xl md:text-6xl font-heading font-bold mb-4 tracking-tight text-white">Trouve ton créneau.</h2>

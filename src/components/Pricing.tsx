@@ -54,7 +54,7 @@ export function Pricing() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="text-center max-w-2xl mx-auto mb-20"
                 >
                     <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">Découvrir</span>

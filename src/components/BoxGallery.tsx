@@ -36,7 +36,7 @@ export function BoxGallery() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="max-w-xl"
                     >
                         <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">Notre Espace</span>

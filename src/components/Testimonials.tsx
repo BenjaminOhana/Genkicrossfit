@@ -33,7 +33,7 @@ export function Testimonials() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="max-w-2xl"
                     >
                         <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">Avis Clients</span>
@@ -44,7 +44,7 @@ export function Testimonials() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                         className="flex items-center gap-4 bg-white/5 px-6 py-4 rounded-full border border-white/10"
                     >
                         <span className="text-3xl font-heading text-white font-bold tracking-wider pt-1">5.0</span>

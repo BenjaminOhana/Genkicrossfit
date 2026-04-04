@@ -103,6 +103,9 @@ export function HeroTransition() {
                     </div>
                 </div>
             </div>
+
+            {/* Gradient into the next section (cream) */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-b from-transparent to-cream pointer-events-none" />
         </section>
     );
 }
