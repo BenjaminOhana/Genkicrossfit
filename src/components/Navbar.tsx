@@ -21,7 +21,7 @@ export function Navbar() {
             setIsPastHero(window.scrollY > window.innerHeight * 0.8);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         // Clean up and initial check
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
