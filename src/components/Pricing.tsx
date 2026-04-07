@@ -48,7 +48,7 @@ export function Pricing() {
     ];
 
     return (
-        <section id="pricing" className="py-24 md:py-32 bg-gray text-black overflow-hidden">
+        <section id="pricing" data-cta-section className="py-24 md:py-32 bg-gray text-black overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

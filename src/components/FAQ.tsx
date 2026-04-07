@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, ChevronDown } from 'lucide-react';
 
 export function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [isFaqVisible, setIsFaqVisible] = useState(false);
 
     const faqs = [
         {
@@ -56,60 +57,81 @@ export function FAQ() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="flex flex-col"
                 >
                     <div className="text-center mb-16">
                         <span className="text-wine font-heading tracking-widest uppercase text-sm mb-4 block">F.A.Q</span>
-                        <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight">Questions Fréquentes</h2>
+                        <h2 className="text-4xl md:text-5xl font-heading font-bold tracking-tight mb-8">Questions Fréquentes</h2>
+                        
+                        {!isFaqVisible && (
+                            <motion.button 
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                onClick={() => setIsFaqVisible(true)}
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-white rounded-full shadow-md text-black font-heading font-bold uppercase tracking-widest hover:bg-wine hover:text-white transition-all duration-300 group"
+                            >
+                                Voir les questions
+                                <ChevronDown size={20} className="group-hover:translate-y-1 transition-transform" />
+                            </motion.button>
+                        )}
                     </div>
 
-                    <div className="space-y-4 mb-16">
-                        {faqs.map((faq, index) => {
-                            const isOpen = openIndex === index;
+                    <AnimatePresence>
+                        {isFaqVisible && (
+                            <motion.div 
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                                className="space-y-4 mb-16 overflow-hidden"
+                            >
+                                {faqs.map((faq, index) => {
+                                    const isOpen = openIndex === index;
 
-                            return (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.06 }}
-                                    className={`border overflow-hidden transition-all duration-300 ${isOpen
-                                            ? 'bg-white border-wine/20 shadow-md rounded-xl'
-                                            : 'bg-white border-black/5 rounded-xl hover:border-black/20'
-                                        }`}
-                                >
-                                    <button
-                                        onClick={() => setOpenIndex(isOpen ? null : index)}
-                                        className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none"
-                                    >
-                                        <h3 className={`font-bold text-lg leading-snug transition-colors ${isOpen ? 'text-wine' : 'text-black'}`}>
-                                            {faq.question}
-                                        </h3>
-                                        <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-wine text-white' : 'bg-gray text-black/50 hover:bg-black hover:text-white'
-                                            }`}>
-                                            {isOpen ? <Minus size={16} /> : <Plus size={16} />}
-                                        </div>
-                                    </button>
-
-                                    <AnimatePresence>
-                                        {isOpen && (
-                                            <motion.div
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: "auto", opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                    return (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            transition={{ duration: 0.7, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                                            className={`border overflow-hidden transition-colors duration-500 transform-gpu isolate ${isOpen
+                                                    ? 'bg-white border-wine/20 shadow-md rounded-xl'
+                                                    : 'bg-white border-black/5 rounded-xl hover:border-black/20 hover:shadow-sm'
+                                                }`}
+                                        >
+                                            <button
+                                                onClick={() => setOpenIndex(isOpen ? null : index)}
+                                                className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none"
                                             >
-                                                <div className="px-6 pb-6 pt-2 text-black/70 font-body leading-relaxed border-t border-black/5 mt-2">
-                                                    {faq.answer}
+                                                <h3 className={`font-bold text-lg leading-snug transition-colors duration-300 ${isOpen ? 'text-wine' : 'text-black'}`}>
+                                                    {faq.question}
+                                                </h3>
+                                                <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-wine text-white' : 'bg-gray text-black/50 group-hover:bg-black group-hover:text-white'
+                                                    }`}>
+                                                    {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                                                 </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </motion.div>
-                            );
-                        })}
-                    </div>
+                                            </button>
+
+                                            <AnimatePresence>
+                                                {isOpen && (
+                                                    <motion.div
+                                                        initial={{ height: 0, opacity: 0 }}
+                                                        animate={{ height: "auto", opacity: 1 }}
+                                                        exit={{ height: 0, opacity: 0 }}
+                                                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                                                    >
+                                                        <div className="px-6 pb-6 pt-2 text-black/70 font-body leading-relaxed border-t border-black/5 mt-2">
+                                                            {faq.answer}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </motion.div>
+                                    );
+                                })}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
 
                     <div className="text-center">
                         <a

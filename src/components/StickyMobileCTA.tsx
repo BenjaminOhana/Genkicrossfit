@@ -16,17 +16,25 @@ export function StickyMobileCTA() {
     }, []);
 
     useEffect(() => {
-        // Se cache quand un autre CTA est visible à l'écran
+        // Se cache quand un autre CTA ou une section contenant des CTAs est visible à l'écran
+        const visibleElements = new Set();
+        
         const observer = new IntersectionObserver(
             (entries) => {
-                const anyVisible = entries.some(entry => entry.isIntersecting);
-                setIsCTAOnScreen(anyVisible);
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        visibleElements.add(entry.target);
+                    } else {
+                        visibleElements.delete(entry.target);
+                    }
+                });
+                setIsCTAOnScreen(visibleElements.size > 0);
             },
-            { threshold: 0.1 } // Sensibilité augmentée pour se cacher plus vite
+            { threshold: 0.05 } // Déclenche dès que 5% de la section ou du bouton apparaît
         );
 
-        // Observe tous les éléments marqués [data-cta]
-        const targets = document.querySelectorAll('[data-cta]');
+        // Observe tous les boutons [data-cta] ET les sections globales [data-cta-section]
+        const targets = document.querySelectorAll('[data-cta], [data-cta-section]');
         targets.forEach(el => observer.observe(el));
 
         return () => observer.disconnect();
