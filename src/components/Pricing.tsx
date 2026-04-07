@@ -69,15 +69,17 @@ export function Pricing() {
                     {mainPlans.map((plan, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.1 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`rounded-2xl flex flex-col relative overflow-hidden transition-all duration-300 will-change-transform will-change-opacity ${plan.highlight
-                                ? 'bg-black text-cream shadow-2xl scale-100 md:scale-105 z-10 border-none'
+                            initial={{ opacity: 0, y: 40, scale: 0.98 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
+                            className={`opacity-0 h-full flex flex-col ${plan.highlight ? 'z-10' : ''}`}
+                        >
+                            <div className={`rounded-2xl flex-grow flex flex-col relative overflow-hidden transition-all duration-500 transform-gpu isolate ${plan.highlight
+                                ? 'bg-black text-cream shadow-2xl md:scale-105 border-none'
                                 : 'bg-white border border-black/10 shadow-sm hover:shadow-xl hover:-translate-y-2'
                                 }`}
-                        >
+                            >
                             {plan.tag && (
                                 <div className={`absolute top-0 inset-x-0 text-center text-xs font-heading uppercase tracking-widest py-2.5 flex items-center justify-center gap-2 ${plan.highlight ? 'bg-wine text-white' : 'bg-wine/10 text-wine'
                                     }`}>
@@ -136,6 +138,7 @@ export function Pricing() {
                                 >
                                     {plan.cta}
                                 </a>
+                            </div>
                             </div>
                         </motion.div>
                     ))}

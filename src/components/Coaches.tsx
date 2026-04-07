@@ -51,16 +51,16 @@ export function Coaches() {
                             key={index}
                             initial={{ opacity: 0, y: 30, scale: 0.98 }}
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            viewport={{ once: true, margin: "-50px" }}
+                            viewport={{ once: true, margin: "0px 0px -10% 0px" }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
-                            style={{ WebkitBackfaceVisibility: 'hidden', WebkitTransform: 'translate3d(0,0,0)' }}
-                            className="opacity-0 bg-transparent h-full flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+                            className="opacity-0 h-full"
                         >
-                            <div className="relative h-72 overflow-hidden bg-black/5">
-                                <img
-                                    src={coach.image}
-                                    alt={coach.name}
-                                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${coach.position || 'object-center'}`}
+                            <div className="bg-transparent h-full flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group transform-gpu isolate">
+                                <div className="relative h-72 overflow-hidden bg-black/5">
+                                    <img
+                                        src={coach.image}
+                                        alt={coach.name}
+                                        className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${coach.position || 'object-center'}`}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
                                 <div className="absolute bottom-6 left-6 right-6">
@@ -88,6 +88,7 @@ export function Coaches() {
                                         </ul>
                                     </div>
                                 )}
+                            </div>
                             </div>
                         </motion.div>
                     ))}
