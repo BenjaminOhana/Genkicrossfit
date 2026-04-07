@@ -53,6 +53,7 @@ export function Coaches() {
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
+                            style={{ WebkitBackfaceVisibility: 'hidden', WebkitTransform: 'translate3d(0,0,0)' }}
                             className="opacity-0 bg-transparent h-full flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
                         >
                             <div className="relative h-72 overflow-hidden bg-black/5">

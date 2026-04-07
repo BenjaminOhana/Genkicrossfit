@@ -33,11 +33,11 @@ export function Demystification() {
             <div className="max-w-5xl mx-auto px-6">
                 {/* Header with HUGE Logo */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-24 will-change-transform will-change-opacity"
+                    initial={{ opacity: 0, y: 30, scale: 0.98 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-center mb-24"
                 >
                     <img
                         src="/assets/optimized/crossfit-genki-logo.svg"
@@ -53,12 +53,12 @@ export function Demystification() {
                     {points.map((point, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
-                            className="relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-700 cursor-default will-change-transform will-change-opacity"
-                            style={{ minHeight: '420px' }}
+                            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                            transition={{ duration: 1, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                            className="relative rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-700 cursor-default bg-[#1a1a1a]"
+                            style={{ minHeight: '420px', WebkitBackfaceVisibility: 'hidden', WebkitTransform: 'translate3d(0,0,0)' }}
                         >
                             {/* Background Image — effet focus au scroll */}
                             <div className="absolute inset-0 z-0 overflow-hidden bg-black">
@@ -88,12 +88,14 @@ export function Demystification() {
                             {/* Gradient — fort en bas pour le texte, léger en haut */}
                             <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/95 via-black/50 to-black/10"></div>
 
-                            {/* Badge numéroté — coin haut gauche, style chapitre */}
-                            <div className="absolute top-6 left-6 z-20 flex items-center gap-3">
-                                <span className="w-10 h-10 rounded-full border-2 border-white/60 bg-black/30 backdrop-blur-sm flex items-center justify-center text-white font-heading font-bold text-sm leading-none">
-                                    {index + 1}
-                                </span>
-                                <div className="h-px w-8 bg-white/40"></div>
+                            {/* Badge numéroté — coin haut gauche, style glassmorphism affiné */}
+                            <div className="absolute top-6 left-6 md:top-8 md:left-8 z-20 flex items-center gap-4">
+                                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-2 flex items-center justify-center shadow-xl">
+                                    <span className="text-white font-heading font-bold tracking-widest text-lg leading-none drop-shadow-md">
+                                        {point.number}
+                                    </span>
+                                </div>
+                                <div className="h-[2px] w-8 md:w-12 bg-white/30"></div>
                             </div>
 
                             {/* Left accent bar — visible on hover */}
@@ -102,11 +104,11 @@ export function Demystification() {
                             {/* Content Box — ancré en bas, avec focus au scroll */}
                             <div className="absolute inset-0 z-20 flex flex-col justify-end p-7 md:p-12">
                                 <motion.div
-                                    initial={{ opacity: 0.5, y: 15 }}
+                                    initial={{ opacity: 0, y: 25 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ margin: "-25% 0px -25% 0px", amount: 0.4 }} // S'active en même temps que l'image
-                                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-                                    className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 transform transition-transform duration-500 group-hover:-translate-y-1 will-change-transform will-change-opacity"
+                                    viewport={{ once: true, margin: "0px 0px -10% 0px" }} 
+                                    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+                                    className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 transform transition-transform duration-500 group-hover:-translate-y-1"
                                 >
                                     <div className="flex-1 max-w-2xl">
                                         <h3 className="text-3xl md:text-4xl font-heading font-bold uppercase tracking-wide mb-3 text-white">
@@ -131,11 +133,11 @@ export function Demystification() {
 
                 {/* CTA */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="mt-20 text-center will-change-transform will-change-opacity"
+                    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="mt-20 text-center"
                 >
                     <p className="text-xl text-[#1a1a1a]/60 font-body italic mb-8 max-w-2xl mx-auto">
                         Un essai suffit. Réserve le tien.

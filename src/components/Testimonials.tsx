@@ -58,7 +58,7 @@ export function Testimonials() {
                 </div>
 
                 <div
-                    className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pb-8 -mx-6 px-6 md:mx-0 md:px-0"
+                    className="flex overflow-x-auto snap-x snap-mandatory md:snap-none md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pb-8 -mx-6 px-6 md:mx-0 md:px-0"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
                 >
                     <style dangerouslySetInnerHTML={{
@@ -72,14 +72,14 @@ export function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-zinc-900 border border-zinc-800 p-6 md:p-8 rounded-2xl relative min-w-[85vw] sm:min-w-[350px] md:min-w-0 md:w-auto flex-none flex flex-col justify-between"
+                            className="bg-zinc-900 border border-zinc-800 p-6 md:p-8 rounded-2xl relative min-w-[85vw] sm:min-w-[350px] md:min-w-0 md:w-auto flex-none flex flex-col justify-between snap-center md:snap-align-none"
                         >
                             <div className="flex text-wine mb-4 md:mb-6">
                                 {[...Array(review.rating)].map((_, i) => (
                                     <Star key={i} size={16} fill="currentColor" />
                                 ))}
                             </div>
-                            <p className="text-sm md:text-base text-cream/90 font-body mb-6 md:mb-8 italic line-clamp-4 md:line-clamp-none">"{review.text}"</p>
+                            <p className="text-sm md:text-base text-cream/90 font-body mb-6 md:mb-8 italic">"{review.text}"</p>
                             <div className="flex items-center gap-4 mt-auto">
                                 <div className="w-10 h-10 bg-wine/20 rounded-full flex items-center justify-center text-wine font-heading font-bold text-lg uppercase shrink-0">
                                     {review.name.charAt(0)}
@@ -91,6 +91,8 @@ export function Testimonials() {
                             </div>
                         </motion.div>
                     ))}
+                    {/* Add a spacer element at the end for mobile horizontal scrolling in Safari */}
+                    <div className="w-[1px] flex-none md:hidden" aria-hidden="true"></div>
                 </div>
 
                 <motion.div
