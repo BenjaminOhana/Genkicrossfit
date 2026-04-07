@@ -29,7 +29,7 @@ export function Demystification() {
     ];
 
     return (
-        <section id="demystification" className="py-24 md:py-32 bg-cream text-[#1a1a1a] relative z-10">
+        <section id="demystification" className="py-24 md:py-32 bg-cream text-[#1a1a1a] relative">
             <div className="max-w-5xl mx-auto px-6">
                 {/* Header with HUGE Logo */}
                 <motion.div
@@ -45,7 +45,7 @@ export function Demystification() {
                         loading="lazy"
                         className="h-64 sm:h-72 md:h-96 w-auto object-contain mx-auto mb-10"
                     />
-                    <h2 className="text-4xl md:text-5xl lg:text-5xl font-heading font-bold tracking-tight">Ta place est ici, peu importe ton niveau.</h2>
+                    <h2 className="text-4xl md:text-5xl lg:text-5xl font-heading font-bold tracking-tight">Tu as ta place ici, peu importe ton niveau.</h2>
                 </motion.div>
 
                 {/* Numbered Image Cards */}

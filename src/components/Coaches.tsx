@@ -53,13 +53,13 @@ export function Coaches() {
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
-                            className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group will-change-transform will-change-opacity"
+                            style={{ opacity: 0 }}
+                            className="bg-transparent h-full flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group will-change-transform will-change-opacity"
                         >
-                            <div className="relative h-72 overflow-hidden">
+                            <div className="relative h-72 overflow-hidden bg-black/5">
                                 <img
                                     src={coach.image}
                                     alt={coach.name}
-                                    loading="lazy"
                                     className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${coach.position || 'object-center'}`}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
@@ -69,7 +69,7 @@ export function Coaches() {
                                 </div>
                             </div>
 
-                            <div className="p-6">
+                            <div className="p-6 bg-white flex-grow">
                                 {coach.quote && (
                                     <blockquote className="text-black/80 font-body italic mb-4 relative text-sm">
                                         <span className="text-3xl text-gray-300 absolute -top-3 -left-1 leading-none">"</span>
