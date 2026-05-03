@@ -13,7 +13,7 @@ export function Hyrox() {
             metaDesc.setAttribute('content', "Prépare-toi pour HYROX chez CrossFit Genki à Talange (57). Entraînements spécifiques course + fonctionnel. 50+ athlètes préparés. Coaching certifié. Essai gratuit.");
         }
         if (canonical) {
-            canonical.setAttribute('href', 'https://genkicrossfit.netlify.app/hyrox');
+            canonical.setAttribute('href', 'https://crossfitgenki.fr/hyrox');
         }
         return () => {
             document.title = "CrossFit Genki — Salle de CrossFit à Talange près de Metz | Séance d'essai gratuite";

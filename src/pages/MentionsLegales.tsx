@@ -22,7 +22,7 @@ export function MentionsLegales() {
                 <section className="mb-10">
                     <h2 className="text-lg md:text-xl font-heading text-wine uppercase tracking-wider mb-4">1. Éditeur du site</h2>
                     <p className="text-cream/70 font-body leading-relaxed mb-3">
-                        Le présent site internet <strong className="text-cream/90">genkicrossfit.netlify.app</strong> (ci-après « le Site ») est édité par :
+                        Le présent site internet <strong className="text-cream/90">crossfitgenki.fr</strong> (ci-après « le Site ») est édité par :
                     </p>
                     <ul className="text-cream/70 font-body leading-relaxed space-y-2 pl-0 list-none">
                         <li><strong className="text-cream/90">Dénomination sociale :</strong> A2MG CROSSFIT</li>
